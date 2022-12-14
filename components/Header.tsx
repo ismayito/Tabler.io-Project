@@ -5,8 +5,6 @@ import tw from 'twin.macro'
 import Navbar from './Navbar'
 import { AiOutlineHeart } from "react-icons/ai";
 import {FiGithub} from "react-icons/fi"
-import {MdOutlineDarkMode} from "react-icons/md"
-import {IoMdNotificationsOutline} from "react-icons/io"
 import {BiRadioCircle} from "react-icons/bi"
 import  Profile from './Profile';
 import {GiHamburgerMenu} from "react-icons/gi"
@@ -23,8 +21,6 @@ import { IconLifebuoy } from '@tabler/icons';
 import {AiOutlineClose} from "react-icons/ai"
 import Notifications from './Notifications'
 import ThemeSwitcher from './ThemeSwitcher'
-
-
 const Head=tw.header`
   md:flex
  bg-white
@@ -84,6 +80,7 @@ const Header = () => {
             </div>
          </div>
       </Head>
+      <Navbar></Navbar>
       {/*Navbar mobile view  */}
       <nav className='md:hidden bg-white w-full '>
         <div className='flex justify-between py-4 px-2 w-full pb-1 border-b border-gray-200'>
@@ -109,7 +106,7 @@ const Header = () => {
            <div><IconPackage size={18} className="inline-block text-gray-500 mr-1"></IconPackage> Interface</div>
            <RiArrowDropDownLine size={20} className="text-gray-500 text-sm"></RiArrowDropDownLine>
           </div>
-          <Link  href='/' className='flex w-full ml-1 items-center cursor-pointer pb-2 gap-1 text-slate-900'>
+          <Link  href='/'  onClick={e => e.stopPropagation()} className='flex w-full ml-1 items-center cursor-pointer pb-2 gap-1 text-slate-900'>
             <IconCheckbox size={15} className='text-gray-500 mr-1'></IconCheckbox> Form Elements
           </Link>
           <div onClick={e => e.stopPropagation()} className='flex justify-between ml-1 items-center gap-1 cursor-pointer pb-2'>
@@ -120,11 +117,11 @@ const Header = () => {
            <div><IconLayout size={20} className="inline-block text-gray-500 mr-1"></IconLayout>Layout</div>
            <RiArrowDropDownLine size={20} className="text-gray-500 text-sm"></RiArrowDropDownLine>
           </div>
-          <Link  href='/' className='flex w-full ml-1 items-center cursor-pointer pb-2 gap-1 text-slate-900'>
+          <Link  href='/'  onClick={e => e.stopPropagation()} className='flex w-full ml-1 items-center cursor-pointer pb-2 gap-1 text-slate-900'>
             <IconGhost size={18} className='text-gray-500 mr-1'></IconGhost> 2979 icons
           </Link>
           <div onClick={e => e.stopPropagation()}  className='flex justify-between ml-1 items-center gap-1 cursor-pointer pb-2'>
-           <div><IconLifebuoy size={20} className="inline-block mr-1 text-gray-500"></IconLifebuoy>Layout</div>
+           <div><IconLifebuoy size={20} className="inline-block mr-1 text-gray-500"></IconLifebuoy>Help</div>
            <RiArrowDropDownLine size={15} className="text-gray-500 text-sm"></RiArrowDropDownLine>
           </div>
         </div>
