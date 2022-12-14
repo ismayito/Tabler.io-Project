@@ -6,7 +6,7 @@ function Layout({children}:any) {
         <>
             <Header></Header>
             {/* <Navbar/> */}
-            <main>{children}</main>
+            <main className="bg-[#f1f5f9]">{children}</main>
         </>
     )
 }

@@ -8,7 +8,7 @@ import {FiGithub} from "react-icons/fi"
 import {MdOutlineDarkMode} from "react-icons/md"
 import {IoMdNotificationsOutline} from "react-icons/io"
 import {BiRadioCircle} from "react-icons/bi"
-import Profile from './Profile';
+import  Profile from './Profile';
 import {GiHamburgerMenu} from "react-icons/gi"
 import {RxHamburgerMenu} from "react-icons/rx"
 import {AiOutlineSearch} from "react-icons/ai"
@@ -21,13 +21,17 @@ import { IconLayout } from '@tabler/icons';
 import { IconGhost } from '@tabler/icons';
 import { IconLifebuoy } from '@tabler/icons';
 import {AiOutlineClose} from "react-icons/ai"
+import Notifications from './Notifications'
+import ThemeSwitcher from './ThemeSwitcher'
 
 
 const Head=tw.header`
   md:flex
  bg-white
+ dark:bg-[#1a2234]
  justify-between
   xl:px-28 
+  lg:px-24
   px-2
   hidden
   h-auto 
@@ -35,6 +39,7 @@ const Head=tw.header`
   pb-1 
   border-b-[1px]
 border-gray-200
+dark:border-[#243049]
 `
 const Input=tw.input `
 pl-8 
@@ -51,54 +56,36 @@ focus:ring-blue-200
 focus:outline-none
 `
 const Header = () => {
-
   const [nav, setNav]= useState(false);
-  const [item, setItem] =useState(false)
   const handleNav=()=>{
   setNav(!nav);
 }
 
-
-const showItems=()=>{
-  setItem(!item)
-}
-console.log(nav)
   return ( 
     <div>
       {/* Navbar web view */}
       <Head>
-        <Link href="/" className='mt-1'> <Image src='/logo.svg' alt="profile-img" width={110} height={32}></Image></Link>
+        <Link href="/" className='mt-1 dark:text-white'> <Image src='/logo.svg' alt="profile-img" width={110} height={32}></Image></Link>
          <div className='flex items-center justify-center mt-1'>
           <div className='flex gap-2'>
-            <Link href="/" className='border border-gray-200 py-1 px-3 rounded'>
+            <Link href="/" className='border dark:border-[#243049] border-gray-200 py-1 px-3 rounded'>
               <FiGithub size={15} className='inline-block'></FiGithub> Source code
             </Link>
-            <Link href="/" className='border border-gray-200 py-1 px-3 rounded'>
+            <Link href="/" className='border dark:border-[#243049] border-gray-200 py-1 px-3 rounded'>
               <AiOutlineHeart size={16} className='inline-block text-red-400'></AiOutlineHeart> Sponsor
             </Link>
             </div> 
             <div className='flex gap-3 ml-5'>
-              <button><MdOutlineDarkMode size={20} className="text-gray-700"></MdOutlineDarkMode></button>
-              <button className='relative flex gap-0'>
-                <IoMdNotificationsOutline size={20}></IoMdNotificationsOutline>
-                <BiRadioCircle size={8} 
-                className="bg-red-500 mt-[-6px] ml-0 rounded-full text-red-500">
-                </BiRadioCircle>
-              </button>
+              <ThemeSwitcher></ThemeSwitcher>
+              <Notifications></Notifications>
             </div>
-            <div className='flex ml-4'>
-              <button>
-               <Image src="/profile icon.png" className=' flex inlline-block rounded-md h-8 w-8 mr-1'  alt="profile" width={40} height={40}></Image> 
-              </button>
-              <div>
-                  <p className='hidden md:block'>Pawel Kuna </p>
-                  <p className='text-gray-500 text-[12px] font-sm hidden md:block'>UI Designer</p>
-                </div>
+            <div  className='flex ml-4 cursor-pointer'>
+              <Profile></Profile>
             </div>
          </div>
       </Head>
       {/*Navbar mobile view  */}
-      <nav className='md:hidden bg-white '>
+      <nav className='md:hidden bg-white w-full '>
         <div className='flex justify-between py-4 px-2 w-full pb-1 border-b border-gray-200'>
         <div onClick={handleNav}>
           {nav ? <AiOutlineClose size={25} 
@@ -106,9 +93,7 @@ console.log(nav)
           className="text-sm font-semibold"/>}
         </div>
         <Link href="/" className='mt-1'><Image src='/logo.svg' alt="profile-img" width={110} height={32}></Image></Link>
-        <button>
-        <Image src="/profile icon.png" className=' flex inlline-block rounded-md h-8 w-8 mr-1'  alt="profile" width={40} height={40}></Image> 
-        </button>
+        <Profile></Profile>
         </div>
          <div onClick={handleNav} className={nav ? "flex flex-col w-full mt-2 pl-2 border-b left-0 bg-white border-gray-200 pb-1 absolute" :"absolute left-[-100%]"}>
           <form onClick={e => e.stopPropagation()} className='flex w-full items-center ml-0 mr-1'>
@@ -144,10 +129,7 @@ console.log(nav)
           </div>
         </div>
        </nav>
-  
     </div>
-    
- 
   )
 }
 
