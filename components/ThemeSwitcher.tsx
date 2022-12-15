@@ -7,7 +7,6 @@ import {MdOutlineDarkMode} from "react-icons/md"
 const ThemeSwitcher = () => {
     const {theme,setTheme}=useTheme();
     const [isMounted,setIsMounted] = useState(false);
-
     useEffect(() => {
       setIsMounted(true);
     }, [])

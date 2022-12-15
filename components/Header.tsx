@@ -21,36 +21,7 @@ import { IconLifebuoy } from '@tabler/icons';
 import {AiOutlineClose} from "react-icons/ai"
 import Notifications from './Notifications'
 import ThemeSwitcher from './ThemeSwitcher'
-const Head=tw.header`
-  md:flex
- bg-white
- dark:bg-[#1a2234]
- justify-between
-  xl:px-28 
-  lg:px-24
-  px-2
-  hidden
-  h-auto 
-  w-full 
-  pb-1 
-  border-b-[1px]
-border-gray-200
-dark:border-[#243049]
-`
-const Input=tw.input `
-pl-8 
-text-sm 
-py-2 
-h-auto 
-w-full
-mr-1
-border
-border-gray-300
-rounded 
-focus:ring
-focus:ring-blue-200
-focus:outline-none
-`
+
 const Header = () => {
   const [nav, setNav]= useState(false);
   const handleNav=()=>{
@@ -61,7 +32,8 @@ const Header = () => {
     <div>
       {/* Navbar web view */}
       <Head>
-        <Link href="/" className='mt-1 dark:text-white'> <Image src='/logo.svg' alt="profile-img" width={110} height={32}></Image></Link>
+        <Link href="/" className='dark:block hidden mt-1 dark:text-white'> <Image src='/logo-white.svg' alt="profile-img" width={110} height={32}></Image></Link>
+        <Link href="/" className=' dark:hidden mt-1 dark:text-white'> <Image src='/logo.svg' alt="profile-img" width={110} height={32}></Image></Link>
          <div className='flex items-center justify-center mt-1'>
           <div className='flex gap-2'>
             <Link href="/" className='border dark:border-[#243049] border-gray-200 py-1 px-3 rounded'>
@@ -131,3 +103,33 @@ const Header = () => {
 }
 
 export default Header
+const Head=tw.header`
+  md:flex
+ bg-white
+ dark:bg-[#1a2234]
+  justify-between
+  lg:px-14
+  xl:px-28
+  md:max-md:px-2
+  hidden
+  h-auto 
+  w-full 
+  pb-1 
+  border-b-[1px]
+border-gray-200
+dark:border-[#243049]
+`
+const Input=tw.input `
+pl-8 
+text-sm 
+py-2 
+h-auto 
+w-full
+mr-1
+border
+border-gray-300
+rounded 
+focus:ring
+focus:ring-blue-200
+focus:outline-none
+`

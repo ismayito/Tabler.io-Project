@@ -15,7 +15,7 @@ import {IoMdNotificationsOutline} from "react-icons/io"
         </BiRadioCircle>
     </Menu.Button>
     <Menu.Items className="absolute top-12 origin-top-right text-sm
-     text-gray-700 md:right-16 lg:right-60 border justify-center
+     text-gray-700 md:right-16 lg:right-60 border justify-center z-50
       border-gray-100 w-auto flex flex-col  divide-y dark:divide-[#243049] divide-gray-200 
       rounded-sm bg-white shadow-lg dark:bg-[#1a2234] dark:border-[#243049]">
        <Menu.Item>
