@@ -31,7 +31,7 @@ const Div=tw.div`
  xl:px-28
  md:max-md:px-2
  dark:bg-[#1a2234]
- mt-4
+ pt-4
  h-auto 
  w-full 
 `
