@@ -13,7 +13,6 @@ import {AiOutlineSearch} from "react-icons/ai"
 
 const Navbar = () => {
   return (
-    <div>
       <Nav>
         <Div1>
          <Link href='/' className='flex 
@@ -24,7 +23,7 @@ const Navbar = () => {
         border-blue-600 
           items-center
           cursor-pointer
-          md:max-[991px]:text-sm
+          md:max-[991px]:text-[16px]
           py-3 gap-1'>
             <BiHome size={20} className='md:max-[992px]:hidden text-gray-500 mr-1'></BiHome> Home
          </Link>
@@ -33,22 +32,22 @@ const Navbar = () => {
            <RiArrowDropDownLine size={20} className="  text-gray-500 text-sm"></RiArrowDropDownLine>
          </Div2>
          <Link  href='/'  className='flex mt-1
-                 ml-1 items-center  dark:hover:text-white  md:max-[991px]:text-sm dark:text-white cursor-pointer pb-2 gap-1 text-slate-900'>
+                 ml-1 items-center  dark:hover:text-white  md:max-[991px]:text-[16px] dark:text-white cursor-pointer pb-2 gap-1 text-slate-900'>
             <IconCheckbox size={20} className='text-gray-500 mr-1 md:max-[991px]:hidden'></IconCheckbox> Form Elements
          </Link>
-         <div className='flex   dark:hover:text-white  md:max-[991px]:text-sm dark:text-white justify-between ml-1 mt-1 items-center gap-1 cursor-pointer pb-2'>
+         <div className='flex   dark:hover:text-white  md:max-[991px]:text-[16px] dark:text-white justify-between ml-1 mt-1 items-center gap-1 cursor-pointer pb-2'>
            <div><IconStar size={20} className="inline-block md:max-[991px]:hidden text-gray-500 mr-1"></IconStar> Extra</div>
            <RiArrowDropDownLine size={20} className="text-gray-500 text-sm"></RiArrowDropDownLine>
          </div>
-         <div className='flex justify-between  dark:hover:text-white  md:max-[991px]:text-sm dark:text-white  mt-1 ml-1 items-center gap-1 cursor-pointer pb-2'>
+         <div className='flex justify-between  dark:hover:text-white  md:max-[991px]:text-[16px] dark:text-white  mt-1 ml-1 items-center gap-1 cursor-pointer pb-2'>
            <div><IconLayout size={20} className="md:max-[993px]:hidden inline-block text-gray-500 mr-1"></IconLayout>Layout</div>
            <RiArrowDropDownLine size={20} className="text-gray-500 text-sm"></RiArrowDropDownLine>
          </div>
          <Link  href='/'  className='flex mt-1
-                 ml-1 items-center   dark:hover:text-white   md:max-[991px]:text-sm dark:text-white  cursor-pointer pb-2 gap-1 text-slate-900'>
+                 ml-1 items-center   dark:hover:text-white   md:max-[991px]:text-[16px] dark:text-white  cursor-pointer pb-2 gap-1 text-slate-900'>
             <IconGhost size={20} className=' md:max-[993px]:hidden text-gray-500 mr-1'></IconGhost> 2979 icons
          </Link>
-         <div className='flex justify-between   dark:hover:text-white md:max-[991px]:text-sm dark:text-white ml-1 items-center gap-1 cursor-pointer pb-2'>
+         <div className='flex justify-between   dark:hover:text-white md:max-[991px]:text-[16px] dark:text-white ml-1 items-center gap-1 cursor-pointer pb-2'>
            <div><IconLifebuoy size={20} className="inline-block md:max-[993px]:hidden mr-1 text-gray-500"></IconLifebuoy>Help</div>
            <RiArrowDropDownLine size={15} className="text-gray-500 text-sm"></RiArrowDropDownLine>
          </div>
@@ -58,7 +57,6 @@ const Navbar = () => {
             <Input type="text" placeholder="Search..." />
         </form>
       </Nav>
-    </div>
   )
 }
 export default Navbar;
@@ -99,7 +97,7 @@ ml-1
 items-center
 md:max-w-md
 w-auto
-md:max-[991px]:text-sm
+md:max-[991px]:text-[16px]
 gap-1 
 dark:hover:text-white 
 text-slate-900 
