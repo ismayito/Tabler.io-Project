@@ -80,10 +80,12 @@ flex
 gap-3
 text-white
 items-center
-py-1
-px-3
+md:py-1
+md:px-3
 sm:px-2
 sm:py-2
+px-2
+py-2
 mr-1
 bg-[#206bc4]
 rounded
