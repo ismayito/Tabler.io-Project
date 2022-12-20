@@ -12,9 +12,8 @@ const Dashboard = () => {
             <Button1>New view</Button1>
             <Button2>
                 <AiOutlinePlus  size={20} className='inline-block'></AiOutlinePlus>
-                <div className='hidden sm:max-sm:hidden sm:max-md:block md:block'>Create new report</div>
+                <ButonDiv>Create new report</ButonDiv>
             </Button2>
-
           </DivSub>  
         </Div1>
     </Div>
@@ -90,4 +89,10 @@ mr-1
 bg-[#206bc4]
 rounded
 hover:bg-[#206bc4]
+`
+const ButonDiv=tw.div`
+hidden
+sm:max-sm:hidden 
+sm:max-md:block
+md:block
 `
