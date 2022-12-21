@@ -4,7 +4,6 @@ import { IconShoppingCart } from '@tabler/icons';
 import { IconBrandTwitter } from '@tabler/icons';
 import { IconBrandFacebook } from '@tabler/icons';
 import { icons } from 'react-icons/lib';
-import { Categories } from './Data';
 import tw from 'twin.macro';
 
 const SocialsCard = () => {

@@ -26,9 +26,7 @@ export default function ClientsChart() {
         theme: 'dark'
     },
     xaxis: {
-        labels: {
-            padding:0,
-        },
+     
         tooltip: {
             enabled: false
         },
