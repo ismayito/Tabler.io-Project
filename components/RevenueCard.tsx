@@ -4,8 +4,8 @@ import Link from 'next/link';
 import {RiArrowDropDownLine} from "react-icons/ri"
 import { IconTrendingUp } from '@tabler/icons';
 import LastDays from './LastDays';
-import AreaChart from './ActiveChart';
-import RevenueChart from './RevenueChart';
+import AreaChart from './Charts/ActiveChart';
+import RevenueChart from './Charts/RevenueChart';
 const RevenueCard = () => {
   return (
     <Div>

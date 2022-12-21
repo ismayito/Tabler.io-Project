@@ -1,8 +1,12 @@
 import React from 'react'
 import dynamic from 'next/dynamic';
+import { ApexOptions } from '../models';
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
-export default function RevenueChart() {
-    const options={
+interface OptionsProps {
+    myoptions:ApexOptions[]
+   }
+export default function RevenueChart({myoptions}:OptionsProps) {
+    const options:ApexOptions={
         chart: {
             fontFamily: 'inherit',
             sparkline: {

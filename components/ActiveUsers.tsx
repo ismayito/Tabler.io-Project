@@ -4,7 +4,7 @@ import Link from 'next/link';
 import {RiArrowDropDownLine} from "react-icons/ri"
 import { IconTrendingUp } from '@tabler/icons';
 import LastDays from './LastDays';
-import ActiveChart from './ActiveChart';
+import ActiveChart from './Charts/ActiveChart';
 
 const ActiveUsers = () => {
   return (

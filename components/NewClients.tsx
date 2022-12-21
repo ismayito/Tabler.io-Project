@@ -4,8 +4,8 @@ import Link from 'next/link';
 import {RiArrowDropDownLine} from "react-icons/ri"
 import { IconMinus } from '@tabler/icons';
 import LastDays from './LastDays';
-import RevenueChart from './RevenueChart';
-import ClientsChart from './ClientsChart';
+import RevenueChart from './Charts/RevenueChart';
+import ClientsChart from './Charts/ClientsChart';
 
 const NewClients = () => {
   return (
