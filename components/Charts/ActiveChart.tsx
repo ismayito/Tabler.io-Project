@@ -1,13 +1,8 @@
 import React from 'react'
-import dynamic from 'next/dynamic';
-import { ApexOptions } from '../models';
+import dynamic from 'next/dynamic'; 
+import { ApexOptions } from "apexcharts";
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
-
-interface OptionsProps {
- myoptions:ApexOptions[]
-}
-
-export default function ActiveChart({myoptions}:OptionsProps) {
+export default function ActiveChart() {
     const options:ApexOptions={
         chart: {
             fontFamily: 'inherit',

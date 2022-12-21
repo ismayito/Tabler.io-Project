@@ -20,7 +20,7 @@ const ActiveUsers = () => {
              <IconTrendingUp  className='h-5 w-5'></IconTrendingUp>
             </DivContent>
         </Content> 
-        <ActiveChart></ActiveChart>
+        <ActiveChart ></ActiveChart>
     </Div>
   )
 }

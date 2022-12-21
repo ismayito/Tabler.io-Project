@@ -1,13 +1,11 @@
 import React from 'react'
 import dynamic from 'next/dynamic';
-import { ApexOptions } from '../models';
+import { ApexOptions } from "apexcharts";
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-interface OptionsProps {
-    myoptions:ApexOptions[]
-   }
 
-export default function ClientsChart({myoptions}:OptionsProps) {
+
+export default function ClientsChart() {
     const options:ApexOptions={
         chart: {
             fontFamily: 'inherit',
@@ -29,7 +27,7 @@ export default function ClientsChart({myoptions}:OptionsProps) {
     },
     xaxis: {
         labels: {
-            padding: 0,
+            padding:0,
         },
         tooltip: {
             enabled: false
