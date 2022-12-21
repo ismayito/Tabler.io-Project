@@ -69,7 +69,7 @@ function Profile() {
           {({ active }) => (
             <Link
               className={`${active && 'bg-gray-50 dark:bg-[#1a2234]'} text-base w-full rounded-m p-2`}
-              href= "/LogOut"
+              href= "/login"
             >
               LogOut
             </Link>

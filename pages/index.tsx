@@ -14,6 +14,7 @@ export default function Home() {
         <meta name="description" content="developed and designed by mayito ismail" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header></Header>
       <Dashboard></Dashboard>      
     </div>
   )
