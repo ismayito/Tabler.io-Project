@@ -8,7 +8,7 @@ function Profile() {
   return (
     <Menu>
       <Menu.Button className="flex z-100">
-               <Image src="/profile icon.png" className='flex inlline-block rounded-md h-8 w-8 mr-1'  alt="profile" width={40} height={40}></Image> 
+               <Image src="/000m.jpg" className=' mt-1 flex inlline-block rounded-md h-8 w-8 mr-1'  alt="profile" width={40} height={40}></Image> 
               <div>
                   <Name>Pawel Kuna </Name>
                   <Design>UI Designer</Design>
@@ -19,10 +19,11 @@ function Profile() {
       xl:right-28 origin-top-right 
       top-12 text-sm text-gray-700 
       border justify-center
-     border-gray-100
+    border-gray-100
+    dark:border-[#243049]
       w-44 flex flex-col 
-     rounded-md bg-white shadow-lg">
-        <Menu.Item  key={Date.now()}>
+      rounded-md bg-white shadow-lg">
+        <Menu.Item >
           {({ active }) => (
             <Link
               className={`${active && 'bg-gray-50 dark:bg-[#1a2234]'} text-base w-full rounded-m p-2`}
@@ -32,7 +33,7 @@ function Profile() {
             </Link>
           )}
         </Menu.Item>
-        <Menu.Item  key={Date.now()}>
+        <Menu.Item >
           {({ active }) => (
             <Link
               className={`${active && 'bg-gray-50 dark:bg-[#1a2234]'} text-base w-full rounded-m p-2`}
@@ -42,7 +43,7 @@ function Profile() {
             </Link>
           )}
         </Menu.Item>
-        <Menu.Item  key={Date.now()}>
+        <Menu.Item>
           {({ active }) => (
             <Link
               className={`${active && 'bg-gray-50 dark:bg-[#1a2234]'} border-b border-gray-200 dark:border-[#243049]
@@ -65,7 +66,7 @@ function Profile() {
             </Link>
           )}
         </Menu.Item>
-        <Menu.Item  key={Date.now()}>
+        <Menu.Item >
           {({ active }) => (
             <Link
               className={`${active && 'bg-gray-50 dark:bg-[#1a2234]'} text-base w-full rounded-m p-2`}

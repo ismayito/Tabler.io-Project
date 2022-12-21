@@ -32,8 +32,8 @@ const Header = () => {
     <div>
       {/* Navbar web view */}
       <Head>
-        <Link href="/" className='dark:block hidden mt-1 dark:text-white'> <Image src='/logo-white.svg' alt="profile-img" width={110} height={32}></Image></Link>
-        <Link href="/" className=' dark:hidden mt-1 dark:text-white'> <Image src='/logo.svg' alt="profile-img" width={110} height={32}></Image></Link>
+        <Link href="/" className='dark:block hidden mt-2 dark:text-white'> <Image src='/logo-white.svg' alt="profile-img" width={110} height={32}></Image></Link>
+        <Link href="/" className=' dark:hidden mt-2 dark:text-white'> <Image src='/logo.svg' alt="profile-img" width={110} height={32}></Image></Link>
          <div className='flex items-center justify-center mt-1'>
           <div className='flex gap-2'>
             <Link href="/" className='border dark:border-[#243049] border-gray-200 py-1 px-3 rounded'>
