@@ -91,5 +91,5 @@ p-4
 items-center
 rounded
 border
-border-gray-100
+border-gray-200
 `

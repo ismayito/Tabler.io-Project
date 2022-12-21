@@ -8,6 +8,7 @@ import Dashboard from '../components/Dashboard'
 import SalesCard from '../components/SalesCard'
 import Cards from '../components/Cards'
 import SocialsCard from '../components/SocialsCard'
+import TrafficChart from '../components/TrafficChart'
 
 export default function Home() {
   return (

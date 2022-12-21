@@ -35,7 +35,7 @@ export default SalesCard;
 const Div=tw.div`
 bg-white
 border
-border-gray-100
+border-gray-200
 dark:border-[#243049]
 dark:bg-[#1a2234] 
 rounded
