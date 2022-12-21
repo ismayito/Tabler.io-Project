@@ -13,16 +13,12 @@ export default function ActiveChart() {
                 enabled: false
             },
         },
-        bar: {
-            columnWidth:'50%',
-        },
+       
         tooltip: {
         theme: 'dark'
     },
     xaxis: {
-        labels: {
-            padding:0,
-        },
+       
         tooltip: {
             enabled: false
         },
