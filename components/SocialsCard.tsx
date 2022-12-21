@@ -3,7 +3,6 @@ import { IconCurrencyDollar } from '@tabler/icons';
 import { IconShoppingCart } from '@tabler/icons';
 import { IconBrandTwitter } from '@tabler/icons';
 import { IconBrandFacebook } from '@tabler/icons';
-import { icons } from 'react-icons/lib';
 import tw from 'twin.macro';
 
 const SocialsCard = () => {
@@ -50,6 +49,7 @@ const Div=tw.div`
 rounded
 h-auto
 grid 
+md:max-[991px]:grid-cols-2
 md:grid-cols-4
 gap-4
 mt-4
