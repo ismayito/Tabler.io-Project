@@ -20,7 +20,7 @@ a {
 
 @layer base {
   body {
-     @apply dark:bg-[#1a2234]  dark:text-gray-200 bg-[#f1f5f9]   text-gray-900
+     @apply dark:bg-[#1a2234]  dark:text-white bg-[#f1f5f9]   text-gray-900
   }
 }
 

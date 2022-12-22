@@ -8,8 +8,10 @@ import Dashboard from '../components/Dashboard'
 import SalesCard from '../components/SalesCard'
 import Cards from '../components/Cards'
 import SocialsCard from '../components/SocialsCard'
-import TrafficChart from '../components/TrafficChart'
-
+import TrafficChart from '../components/Charts/TrafficChart'
+import Traffic from '../components/Traffic'
+import dynamic from 'next/dynamic'; 
+const Map = dynamic(() => import('../components/Charts/Map'), { ssr: false });
 export default function Home() {
   return (
     <div>
@@ -23,6 +25,10 @@ export default function Home() {
       <DashBoardBody>
         <Cards></Cards>
         <SocialsCard></SocialsCard>
+        <DivTraffic>
+          <Traffic></Traffic>
+          <Map></Map>
+        </DivTraffic>
       </DashBoardBody>  
     </div>
   )
@@ -36,4 +42,15 @@ dark:bg-[#1a2234]
 h-auto 
 w-full
 py-5
+`
+const DivTraffic=tw.div`
+lg:grid
+lg:grid-cols-2
+gap-4
+md:grid
+md:grid-cols-2
+md:max-[991px]:flex
+md:max-[991px]:flex-col
+flex
+flex-col
 `
