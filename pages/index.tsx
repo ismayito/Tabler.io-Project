@@ -14,6 +14,7 @@ import dynamic from 'next/dynamic';
 import StorageProgressBar from '../components/StorageProgressBar'
 import Posts from '../components/Posts'
 import { DevelopmentActivity } from '../components/DevelopmentActivity'
+import TablerIcons from '../components/TablerIcons'
 const Map = dynamic(() => import('../components/Charts/Map'), { ssr: false });
 export default function Home() {
   return (
@@ -39,6 +40,7 @@ export default function Home() {
           </DivStoragePost>
           <DevelopmentActivity></DevelopmentActivity>
         </DivDevelopmentActivityCard>
+        <TablerIcons></TablerIcons>
       </DashBoardBody>  
     </div>
   )
