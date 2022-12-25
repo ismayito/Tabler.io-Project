@@ -43,7 +43,7 @@ export default function TrafficChart() {
     },
     xaxis: {
       tooltip: {
-        enabled: false
+        enabled: false,
       },
       axisBorder: {
         show: false,

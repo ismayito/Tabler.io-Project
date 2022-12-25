@@ -98,11 +98,10 @@ bg-gray-200
 rounded-full
 h-1.5
 dark:bg-gray-700
-
 `
 const Bar=tw.div`
 bg-blue-600 
-h-1
+h-1.5
 rounded-full
 dark:bg-blue-500
 `

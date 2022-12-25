@@ -11,6 +11,9 @@ import SocialsCard from '../components/SocialsCard'
 import TrafficChart from '../components/Charts/TrafficChart'
 import Traffic from '../components/Traffic'
 import dynamic from 'next/dynamic'; 
+import StorageProgressBar from '../components/StorageProgressBar'
+import Posts from '../components/Posts'
+import { DevelopmentActivity } from '../components/DevelopmentActivity'
 const Map = dynamic(() => import('../components/Charts/Map'), { ssr: false });
 export default function Home() {
   return (
@@ -29,6 +32,13 @@ export default function Home() {
           <Traffic></Traffic>
           <Map></Map>
         </DivTraffic>
+        <DivDevelopmentActivityCard>
+          <DivStoragePost>
+           <StorageProgressBar></StorageProgressBar>
+           <Posts></Posts>
+          </DivStoragePost>
+          <DevelopmentActivity></DevelopmentActivity>
+        </DivDevelopmentActivityCard>
       </DashBoardBody>  
     </div>
   )
@@ -53,4 +63,17 @@ md:max-[991px]:flex
 md:max-[991px]:flex-col
 flex
 flex-col
+`
+const DivStoragePost= tw.div`
+flex
+flex-col
+`
+const DivDevelopmentActivityCard= tw.div`
+md:grid
+md:grid-cols-2
+md:max-[992px]:flex
+md:max-[992px]:flex-col
+flex-col
+gap-4
+flex 
 `
