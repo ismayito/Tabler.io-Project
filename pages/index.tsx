@@ -15,6 +15,8 @@ import StorageProgressBar from '../components/StorageProgressBar'
 import Posts from '../components/Posts'
 import { DevelopmentActivity } from '../components/DevelopmentActivity'
 import TablerIcons from '../components/TablerIcons'
+import VisitedPages from '../components/VisitedPages'
+import Sponsor from '../components/Sponsor'
 const Map = dynamic(() => import('../components/Charts/Map'), { ssr: false });
 export default function Home() {
   return (
@@ -41,6 +43,12 @@ export default function Home() {
           <DevelopmentActivity></DevelopmentActivity>
         </DivDevelopmentActivityCard>
         <TablerIcons></TablerIcons>
+        <DivPages>
+          <div className='col-span-2 '>
+          <VisitedPages></VisitedPages>
+          </div>
+          <Sponsor></Sponsor>
+        </DivPages>
       </DashBoardBody>  
     </div>
   )
@@ -79,3 +87,11 @@ flex-col
 gap-4
 flex 
 `
+const DivPages=tw.div`
+lg:grid
+lg:grid-cols-3
+gap-4
+md:max-[992px]:flex
+md:max-[992px]:flex-col
+`
+
