@@ -47,7 +47,6 @@ font-medium
 dark:text-white
 `
 const Paragraph=tw.p`
-text-sm
 text-[#616876]
 max-w-[940px]
 `
