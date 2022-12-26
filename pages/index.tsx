@@ -88,8 +88,8 @@ gap-4
 flex 
 `
 const DivPages=tw.div`
-lg:grid
-lg:grid-cols-3
+md:grid
+md:grid-cols-3
 gap-4
 md:max-[992px]:flex
 md:max-[992px]:flex-col
