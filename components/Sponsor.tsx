@@ -19,13 +19,13 @@ rounded
 border
 border-[#548ed2]
 bg-[#dbe7f6]
+md:max-[992px]:max-w-md
 py-4
 mt-4
 `
 const BackgroundImage=tw.div`
 bg-[url('/sponsor-banner-homepage.svg')]
 min-h-[316px]
-max-w-lg
 bg-no-repeat
 bg-center
 bg-contain
