@@ -55,6 +55,7 @@ dark:bg-[#1a2234]
 rounded
 h-auto
 mt-4
+md:mt-0
 w-full
 col-span-2
 overflow-scroll

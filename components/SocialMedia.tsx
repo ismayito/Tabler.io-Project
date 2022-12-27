@@ -46,6 +46,7 @@ dark:bg-[#1a2234]
 rounded
 h-auto
 mt-4
+md:mt-0
 `
 const Head=tw.p`
 px-6
