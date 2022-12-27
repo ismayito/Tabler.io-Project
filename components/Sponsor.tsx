@@ -19,7 +19,7 @@ rounded
 border
 border-[#548ed2]
 bg-[#dbe7f6]
-md:max-[992px]:max-w-md
+md:max-[992px]:max-w-full
 py-4
 mt-4
 `

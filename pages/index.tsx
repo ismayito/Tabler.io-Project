@@ -17,6 +17,8 @@ import { DevelopmentActivity } from '../components/DevelopmentActivity'
 import TablerIcons from '../components/TablerIcons'
 import VisitedPages from '../components/VisitedPages'
 import Sponsor from '../components/Sponsor'
+import SocialMedia from '../components/SocialMedia'
+import Tasks from '../components/Tasks'
 const Map = dynamic(() => import('../components/Charts/Map'), { ssr: false });
 export default function Home() {
   return (
@@ -48,7 +50,13 @@ export default function Home() {
           <VisitedPages></VisitedPages>
           </div>
           <Sponsor></Sponsor>
+          <SocialMedia></SocialMedia>
+          <Tasks></Tasks> 
         </DivPages>
+        {/* <SocialTasks>
+           <SocialMedia></SocialMedia>
+          <Tasks></Tasks> 
+        </SocialTasks> */}
       </DashBoardBody>  
     </div>
   )
@@ -93,5 +101,15 @@ md:grid-cols-3
 gap-4
 md:max-[992px]:flex
 md:max-[992px]:flex-col
+md:max-[992px]:flex-auto
+
+`
+const SocialTasks=tw.div`
+grid
+grid-cols-3
+gap-4
+md:grid-cols-3
+md:max-[992px]:flex
+md:max-[992px]:flex-auto
 `
 
