@@ -24,7 +24,7 @@ function Profile() {
       w-44 flex flex-col 
       rounded-md bg-white shadow-lg">
         <Menu.Item >
-          {({ active }) => (
+          {({active}) => (
             <Link
               className={`${active && 'bg-gray-50 dark:bg-[#1a2234]'} text-base w-full rounded-m p-2`}
               href= "/"

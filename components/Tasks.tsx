@@ -88,6 +88,7 @@ hover:underline
 const TableData=tw.td`
 align-middle
 py-4
+px-3
 text-[#616876]
 `
 const Span=tw.span`

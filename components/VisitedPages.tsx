@@ -21,11 +21,10 @@ const VisitedPages = () => {
 ]
 
   return (
-    
     <Div>
         <Head>Most Visited Pages</Head>
         <table className='w-full table-auto'>
-            <Thead className=''>
+            <Thead>
                 <tr>
                     <Tablehead>PAGE NAME</Tablehead>
                     <Tablehead>VISITORS</Tablehead>
