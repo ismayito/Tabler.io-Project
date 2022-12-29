@@ -24,7 +24,7 @@ const tasks=[
                 tasks.map(item=>(
                     <tr className='border dark:border-[#243049] border-gray-200 py-3' key={item.link1}>
                         <td className='pl-6'>{item.input}</td>
-                        <td><Links href="/#">{item.link1}</Links></td>
+                        <td className='whitespace-nowrap '><Links href="/#">{item.link1}</Links></td>
                         <TableData><Span>{item.dateIcon}</Span>{item.date}</TableData>
                         <TableData ><Span>{item.checkIcon}</Span><Links>{item.link2}</Links></TableData>
                         <TableData><Span>{item.messageIcon}</Span><Links>{item.link3}</Links></TableData>
@@ -88,7 +88,8 @@ hover:underline
 const TableData=tw.td`
 align-middle
 py-4
-px-3
+whitespace-nowrap 
+// px-3
 text-[#616876]
 `
 const Span=tw.span`

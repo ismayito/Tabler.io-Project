@@ -20,6 +20,7 @@ import Sponsor from '../components/Sponsor'
 import SocialMedia from '../components/SocialMedia'
 import Tasks from '../components/Tasks'
 import Invoices from '../components/Invoices'
+import Footer from '../components/Footer'
 const Map = dynamic(() => import('../components/Charts/Map'), { ssr: false });
 export default function Home() {
   return (
@@ -55,7 +56,8 @@ export default function Home() {
           <Tasks></Tasks> 
         </DivPages>
        <Invoices></Invoices>
-      </DashBoardBody>  
+       <Footer></Footer>  
+      </DashBoardBody>
     </div>
   )
 }
