@@ -6,26 +6,25 @@ import { IconChevronDown } from '@tabler/icons';
 
 function Actions() {
   return (
-    <Menu>
-      <Menu.Button className="flex relative">
-        <Links href="#">Actions <IconChevronDown className='inline-block' size={10}/></Links>
-      </Menu.Button>
-      <Menu.Items className="absolute dark:bg-[#1a2234] dark:text-white 
-       origin-right
-       w-40
-       z-50
-       shadow-xl
-       top-14
-       right-1
-       md:right-4
-       lg:right-12 
-       xl:right-12
-       text-sm text-gray-700 
-       border justify-center
+
+    <Menu as="div" className="relative inline-block text-left">
+        <div>
+          <Menu.Button className="inline-flex w-full justify-center rounded-md px-4 py-2 ">
+            <Links href="#">Actions <IconChevronDown className='inline-block' size={10}/></Links>
+          </Menu.Button>
+        </div>
+        <Menu.Items className="absolute 
+        right-3 w-40 origin-top-right  
+        text-sm text-gray-700 
+        border justify-center
+        top-[51px]
       border-gray-100
+      dark:bg-[#1a2234]
+      dark:text-white
       dark:border-[#243049]
-        flex flex-col 
-        rounded-md bg-white">
+        rounded-md bg-white 
+        z-50 shadow-lg">
+        <div className='flex flex-col'>
         <Menu.Item >
           {({ active }) => (
             <Link
@@ -46,8 +45,9 @@ function Actions() {
             </Link>
           )}
         </Menu.Item>
-      </Menu.Items>
-    </Menu>
+        </div>
+        </Menu.Items>
+    </Menu>   
   )
 }
 

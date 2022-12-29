@@ -124,7 +124,7 @@ const invoices=[
         </Thead>
         <tbody>
           {invoices.map(item=>(
-            <tr key={item.num} className="border dark:border-[#243049] border-gray-200">
+            <tr key={item.num} className="border dark:border-[#243049] border-gray-200 relative">
               <td className='pl-6 py-4 pr-3'>{item.input}</td>
               <td className='py-3 pr-3  whitespace-nowrap '>{item.num}</td>
               <td className='py-3 pr-3 whitespace-nowrap '><Link className='hover:underline' href="#">{item.sub}</Link></td>
