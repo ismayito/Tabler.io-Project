@@ -177,6 +177,7 @@ mt-4
 w-full
 overflow-x-scroll
 md:max-md:overflow-x-scroll
+lg:overflow-x-hidden
 `
 
 const Head=tw.p`
