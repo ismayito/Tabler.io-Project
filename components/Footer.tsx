@@ -2,7 +2,6 @@ import React from 'react'
 import tw from 'twin.macro'
 import Link from 'next/link'
 import { AiOutlineHeart } from "react-icons/ai";
-import { IconHeart } from '@tabler/icons';
 
 const Footer = () => {
   return (
