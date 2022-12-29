@@ -260,6 +260,7 @@ sm:justify-center
 gap-1
 `
 const Links=tw.a`
+opacity-25
 `
 const LinkNum=tw.a`
 px-3
