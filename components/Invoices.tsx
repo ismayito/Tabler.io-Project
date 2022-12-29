@@ -177,6 +177,7 @@ mt-4
 w-full
 overflow-x-scroll
 md:max-md:overflow-x-scroll
+lg:overflow-x-hidden
 `
 
 const Head=tw.p`
@@ -259,6 +260,7 @@ sm:justify-center
 gap-1
 `
 const Links=tw.a`
+opacity-25
 `
 const LinkNum=tw.a`
 px-3
