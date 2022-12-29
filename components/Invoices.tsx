@@ -126,12 +126,12 @@ const invoices=[
           {invoices.map(item=>(
             <tr key={item.num} className="border dark:border-[#243049] border-gray-200">
               <td className='pl-6 py-4 pr-3'>{item.input}</td>
-              <td className='py-3 pr-3 '>{item.num}</td>
-              <td className='py-3 pr-3 '><Link className='hover:underline' href="#">{item.sub}</Link></td>
-              <td className='py-3 pr-3'><span className=' inline-block mr-1'><Image className='rounded-md' width={18} height={20} src={item.flag} alt="flag"></Image></span>{item.client}</td>
-              <td className='py-3 pr-3'>{item.vat}</td>
-              <td className='py-3 pr-3'>{item.date}</td>
-              <td className='py-3 pr-3 '>
+              <td className='py-3 pr-3  whitespace-nowrap '>{item.num}</td>
+              <td className='py-3 pr-3 whitespace-nowrap '><Link className='hover:underline' href="#">{item.sub}</Link></td>
+              <td className='py-3 pr-3 whitespace-nowrap '><span className=' inline-block mr-1'><Image className='rounded-md' width={18} height={20} src={item.flag} alt="flag"></Image></span>{item.client}</td>
+              <td className='py-3 pr-3 whitespace-nowrap '>{item.vat}</td>
+              <td className='py-3 pr-3 whitespace-nowrap '>{item.date}</td>
+              <td className='py-3 pr-3 whitespace-nowrap '>
                   <BiRadioCircle size={8} 
                   className={`${item.text=="paid" && "bg-green-700 rounded-full text-green-700 mr-1"}
                   ${item.text=="pending" && "bg-red-700 rounded-full text-red-700 mr-1"}
@@ -141,7 +141,7 @@ const invoices=[
                 {item.status}
               </td>
               <td className='py-4 pr-3'>{item.price}</td>
-              <td className='py-3 text-left relative'>{item.action}</td>
+              <td className='py-3 text-left relative whitespace-nowrap '>{item.action}</td>
             </tr>
           ))}
         </tbody>
@@ -149,7 +149,7 @@ const invoices=[
         <DivPagination>
             <p>Showing 1 to 8 of the 16 entries</p>
             <DivPages>
-              <Links href="#" className=''><IconChevronLeft size={15} className='inline-block'/>prev</Links>
+              <Links aria-disabled="true" role="link" className=''><IconChevronLeft size={15} className='inline-block'/>prev</Links>
               <LinkNum href="#" className=''>1</LinkNum>
               <LinkNum2 href="#" className=''>2</LinkNum2>
               <LinkNum href="#" className=''>3</LinkNum>
@@ -176,7 +176,7 @@ h-auto
 mt-4
 w-full
 overflow-x-scroll
-md:overflow-x-hidden
+md:max-md:overflow-x-scroll
 `
 
 const Head=tw.p`
@@ -242,8 +242,9 @@ rounded-xl
 focus:ring-blue-100
 `
 const DivPagination=tw.div`
-flex
-justify-between
+md:flex
+md:justify-between
+gap-2
 py-4
 px-6
 text-[#616876]
@@ -258,19 +259,20 @@ sm:justify-center
 gap-1
 `
 const Links=tw.a`
-
 `
 const LinkNum=tw.a`
-px-2
+px-3
+py-1
 rounded-md
 bg-white
 hover:ring-4
 hover:focus:ring-blue-200
 `
 const LinkNum2=tw.a`
-px-2
+px-3
+py-1
 rounded-md
-bg-blue-600
+bg-blue-700
 hover:ring-4
 hover:focus:ring-blue-200
 text-white

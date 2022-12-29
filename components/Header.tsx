@@ -5,9 +5,7 @@ import tw from 'twin.macro'
 import Navbar from './Navbar'
 import { AiOutlineHeart } from "react-icons/ai";
 import {FiGithub} from "react-icons/fi"
-import {BiRadioCircle} from "react-icons/bi"
 import  Profile from './Profile';
-import {GiHamburgerMenu} from "react-icons/gi"
 import {RxHamburgerMenu} from "react-icons/rx"
 import {AiOutlineSearch} from "react-icons/ai"
 import {BiHome} from "react-icons/bi"
