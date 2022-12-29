@@ -1,6 +1,4 @@
 
-
-
 import { Menu } from '@headlessui/react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -10,7 +8,8 @@ import {RiArrowDropDownLine} from "react-icons/ri"
 
 function LastDays() {
   return (
-    <Menu>
+    <Menu as="div" className="relative" >
+     <div>
       <Menu.Button className=" z-100 flex
       hover:underline
       items-center
@@ -19,18 +18,20 @@ function LastDays() {
             Last 7 days 
             <span><RiArrowDropDownLine size={20} className='inline-block'></RiArrowDropDownLine></span> 
       </Menu.Button>
+      </div>  
       <Menu.Items className="
       absolute dark:bg-[#1a2234] dark:text-white 
-      origin-left
+      origin-top-right
+      right-0
+      z-50
       text-sm text-gray-700 
       border justify-center
-      top-[230px]
-      left-[216px]
     border-gray-100
     dark:border-[#243049]
       w-[184px] flex flex-col 
       rounded-md bg-white shadow-lg
       ">
+       <div className='flex flex-col'> 
         <Menu.Item >
           {({ active }) => (
             <Link
@@ -64,6 +65,7 @@ function LastDays() {
             </Link>
           )}
         </Menu.Item>
+        </div>
     
       </Menu.Items>
     </Menu>
