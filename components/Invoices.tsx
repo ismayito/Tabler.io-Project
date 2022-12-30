@@ -178,6 +178,7 @@ w-full
 overflow-x-scroll
 md:max-md:overflow-x-scroll
 lg:overflow-x-hidden
+mx-1
 `
 
 const Head=tw.p`

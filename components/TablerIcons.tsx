@@ -33,6 +33,7 @@ overflow-hidden
 rounded
 h-auto
 mt-4
+mx-1
 `
 const Content=tw.div`
 flex
