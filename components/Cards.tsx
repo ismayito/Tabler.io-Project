@@ -28,4 +28,5 @@ md:max-[991px]:grid-cols-2
 md:grid-cols-4
 gap-4
 mx-1
+lg:mx-0
 `

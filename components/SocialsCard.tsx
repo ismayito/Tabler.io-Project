@@ -54,6 +54,7 @@ md:grid-cols-4
 gap-4
 mt-4
 mx-1
+sm:mx-0
 `
 const Icon=tw.div`
 h-10

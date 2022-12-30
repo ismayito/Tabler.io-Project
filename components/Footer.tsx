@@ -41,6 +41,8 @@ export default Footer
  py-8
  md:flex-row
  md:justify-between
+ mx-1
+ sm:mx-0
  `
  const DivCopyRight=tw.div`
  flex

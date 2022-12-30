@@ -34,6 +34,7 @@ const Div=tw.div`
  h-auto 
  w-full 
  mx-1
+ sm:mx-0
 `
 const Paragraph=tw.p`
 text-[10px]
