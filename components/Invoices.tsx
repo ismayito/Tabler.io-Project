@@ -125,13 +125,13 @@ const invoices=[
         <tbody>
           {invoices.map(item=>(
             <tr key={item.num} className="border dark:border-[#243049] border-gray-200 relative">
-              <td className='pl-6 py-4 pr-3'>{item.input}</td>
-              <td className='py-3 pr-3  whitespace-nowrap '>{item.num}</td>
-              <td className='py-3 pr-3 whitespace-nowrap '><Link className='hover:underline' href="#">{item.sub}</Link></td>
-              <td className='py-3 pr-3 whitespace-nowrap '><span className=' inline-block mr-1'><Image className='rounded-md' width={18} height={20} src={item.flag} alt="flag"></Image></span>{item.client}</td>
-              <td className='py-3 pr-3 whitespace-nowrap '>{item.vat}</td>
-              <td className='py-3 pr-3 whitespace-nowrap '>{item.date}</td>
-              <td className='py-3 pr-3 whitespace-nowrap '>
+              <TableData className='pl-6 py-4'>{item.input}</TableData>
+              <TableData>{item.num}</TableData>
+              <TableData><Link className='hover:underline' href="#">{item.sub}</Link></TableData>
+              <TableData><span className=' inline-block mr-1'><Image className='rounded-md' width={18} height={20} src={item.flag} alt="flag"></Image></span>{item.client}</TableData>
+              <TableData>{item.vat}</TableData>
+              <TableData>{item.date}</TableData>
+              <TableData>
                   <BiRadioCircle size={8} 
                   className={`${item.text=="paid" && "bg-green-700 rounded-full text-green-700 mr-1"}
                   ${item.text=="pending" && "bg-red-700 rounded-full text-red-700 mr-1"}
@@ -139,23 +139,23 @@ const invoices=[
                   ${item.text=="" && "bg-red-800 rounded-full text-red-800 mr-1"} inline-block
                   `} ></BiRadioCircle>
                 {item.status}
-              </td>
-              <td className='py-4 pr-3'>{item.price}</td>
-              <td className='py-3 text-left relative whitespace-nowrap '>{item.action}</td>
+              </TableData>
+              <TableData className='py-4 pr-3'>{item.price}</TableData>
+              <TableData className='text-left relative'>{item.action}</TableData>
             </tr>
           ))}
         </tbody>
        </table>
         <DivPagination>
-            <p>Showing 1 to 8 of the 16 entries</p>
+            <p className=''>Showing 1 to 8 of the 16 entries</p>
             <DivPages>
               <Links aria-disabled="true" role="link" className=''><IconChevronLeft size={15} className='inline-block'/>prev</Links>
-              <LinkNum href="#" className=''>1</LinkNum>
-              <LinkNum2 href="#" className=''>2</LinkNum2>
-              <LinkNum href="#" className=''>3</LinkNum>
-              <LinkNum href="#" className=''>4</LinkNum>
-              <LinkNum href="#" className=''>5</LinkNum>
-              <LinkNum href="#" className=''>next <IconChevronRight size={15} className='inline-block'/></LinkNum>
+              <LinkNum href="#" >1</LinkNum>
+              <LinkNum2 href="#">2</LinkNum2>
+              <LinkNum href="#" >3</LinkNum>
+              <LinkNum href="#" >4</LinkNum>
+              <LinkNum href="#" >5</LinkNum>
+              <LinkNum href="#" >next <IconChevronRight size={15} className='inline-block'/></LinkNum>
             </DivPages>
        </DivPagination> 
     </Div>
@@ -278,4 +278,10 @@ bg-blue-700
 hover:ring-4
 hover:focus:ring-blue-200
 text-white
+`
+const TableData=tw.td`
+py-3
+pr-3
+whitespace-nowrap
+
 `
