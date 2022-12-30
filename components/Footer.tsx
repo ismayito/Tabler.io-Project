@@ -15,8 +15,8 @@ const Footer = () => {
                 </li>
             </ul>
         </DivCopyRight>
-        <DivCopyRight>
-            <p>Documentation</p>
+        <DivDocument>
+            <p className='mr-2'>Documentation</p>
             <ul className='flex items-center gap-2'>
                 <li className='list-disc ml-4'>
                  <Link className='hover:underline' href="https://preview.tabler.io/license.html">License</Link>
@@ -29,7 +29,7 @@ const Footer = () => {
                     <IconHeart size={16} className='inline-block mr-1 fill-red-400 text-red-400 '/>Sponsor</Link>
                 </li>
             </ul>
-        </DivCopyRight>
+        </DivDocument>
     </Div>
   )
 }
@@ -45,9 +45,20 @@ export default Footer
  const DivCopyRight=tw.div`
  flex
  text-[#616876]
- gap-2
+ sm:gap-2
  items-center
  justify-center
  md:flex-row
- md:justify-between
+ flex-wrap
+ `
+ const DivDocument=tw.div`
+ flex
+ text-[#616876]
+ sm:gap-2
+ items-center
+ justify-center
+ md:flex-row
+ flex-wrap
+ order-first
+ sm:order-last
  `
