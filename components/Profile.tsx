@@ -14,7 +14,7 @@ function Profile() {
                   <Design>UI Designer</Design>
                 </div>
       </Menu.Button>
-      <Menu.Items className="absolute dark:bg-[#1a2234] dark:text-white right-1 
+      <Menu.Items className="absolute z-30 dark:bg-[#1a2234] dark:text-white right-1 
       md:right-4 lg:right-28 
       xl:right-28 origin-top-right 
       top-12 text-sm text-gray-700 
