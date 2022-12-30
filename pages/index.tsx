@@ -81,10 +81,12 @@ md:max-[991px]:flex
 md:max-[991px]:flex-col
 flex
 flex-col
+mx-1
 `
 const DivStoragePost= tw.div`
 flex
 flex-col
+mx-1
 `
 const DivDevelopmentActivityCard= tw.div`
 md:grid
@@ -94,6 +96,7 @@ md:max-[992px]:flex-col
 flex-col
 gap-4
 flex 
+mx-1
 `
 const DivPages=tw.div`
 md:grid
@@ -102,7 +105,7 @@ gap-4
 md:max-[992px]:flex
 md:max-[992px]:flex-col
 md:max-[992px]:flex-auto
-
+mx-1
 `
 const SocialTasks=tw.div`
 grid
@@ -111,5 +114,6 @@ gap-4
 md:grid-cols-3
 md:max-[992px]:flex
 md:max-[992px]:flex-auto
+mx-1
 `
 

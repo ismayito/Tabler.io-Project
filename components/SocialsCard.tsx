@@ -53,6 +53,7 @@ md:max-[991px]:grid-cols-2
 md:grid-cols-4
 gap-4
 mt-4
+mx-1
 `
 const Icon=tw.div`
 h-10
