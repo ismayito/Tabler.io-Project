@@ -10,7 +10,7 @@ function LastDays() {
   return (
     <Menu as="div" className="relative" >
      <div>
-      <Menu.Button className=" z-100 flex
+      <Menu.Button className="flex
       hover:underline
       items-center
     text-[#616876]
@@ -23,7 +23,7 @@ function LastDays() {
       absolute dark:bg-[#1a2234] dark:text-white 
       origin-top-right
       right-0
-      z-50
+      z-10
       text-sm text-gray-700 
       border justify-center
     border-gray-100
