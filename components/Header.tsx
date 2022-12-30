@@ -53,7 +53,7 @@ const Header = () => {
       <Navbar></Navbar>
       {/*Navbar mobile view  */}
       <nav className='md:hidden bg-white w-full dark:text-white dark:bg-[#1a2234] '>
-        <div className='flex justify-between py-4 px-2 w-full pb-1 border-b dark:border-[#243049] border-gray-200'>
+        <div className='flex justify-between items-center py-4 px-2 w-full pb-1 border-b dark:border-[#243049] border-gray-200'>
         <div onClick={handleNav}>
           {nav ? <AiOutlineClose size={25} 
           className="text-sm font-semibold"/>:<RxHamburgerMenu size={25} 
@@ -63,7 +63,7 @@ const Header = () => {
         <Link href="/" className='dark:hidden mt-1'><Image src='/logo.svg' alt="profile-img" width={110} height={32}></Image></Link>
         <Profile></Profile>
         </div>
-         <div onClick={handleNav} className={nav ? "flex flex-col w-full mt-2 pl-2 border-b left-0 bg-white border-gray-200 pb-1 absolute" :"absolute left-[-100%]"}>
+         <div onClick={handleNav} className={nav ? "flex  z-30 flex-col w-full mt-2 pl-2 border-b left-0 bg-white border-gray-200 pb-1 absolute" :"absolute left-[-100%]"}>
           <form onClick={e => e.stopPropagation()} className='flex w-full items-center ml-0 mr-1'>
             <AiOutlineSearch  size={20} className='absolute text-center ml-2 mr-1 text-gray-500' ></AiOutlineSearch>
             <Input type="text" placeholder="Search..." className=''/>
