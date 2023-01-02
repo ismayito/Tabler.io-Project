@@ -11,7 +11,7 @@
   }
   catch(any){
     const firebaseConfig = {
-      apiKey:process.env.apiKey, 
+      apiKey:'AIzaSyBRFETr2RorBrVQHrth3S4BWVWgLMxvsFs', 
       authDomain: "tabler-project.firebaseapp.com",
       projectId: "tabler-project",
       storageBucket: "tabler-project.appspot.com",
