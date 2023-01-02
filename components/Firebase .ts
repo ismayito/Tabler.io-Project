@@ -12,7 +12,7 @@
   catch(any){
     const firebaseConfig = {
       apiKey:'AIzaSyBRFETr2RorBrVQHrth3S4BWVWgLMxvsFs', 
-      authDomain: "https://tabler-io-project.vercel.app",
+      authDomain: "tabler-project.firebaseapp.com",
       projectId: "tabler-project",
       storageBucket: "tabler-project.appspot.com",
       messagingSenderId: "215462454255",
