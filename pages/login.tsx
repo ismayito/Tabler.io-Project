@@ -1,19 +1,47 @@
-import React from 'react'
+import React,{useState} from 'react'
 import tw from "twin.macro"
 import Image from 'next/image'
 import Link from "next/link"
-import {AiOutlineEye} from 'react-icons/ai'
 import { IconEye } from '@tabler/icons';
 import { IconBrandGithub } from '@tabler/icons';
 import { IconBrandTwitter } from '@tabler/icons';
+import { auth } from '../components/Firebase '
+import Router from 'next/router'
+import { GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
+import {signInWithPopup, GithubAuthProvider } from "firebase/auth";
 
  const LogOut = () => {
+  const [email,setEmail]=useState('');
+  const [password,setPassWord]= useState('');
+
+  const SignIn=(e:React.MouseEvent)=>{
+    e.preventDefault();
+    signInWithEmailAndPassword(auth,email,password).
+    then(auth=>{
+      Router.replace("/")
+      
+    }).
+    catch(error=>alert(error.message)) 
+  }
+
+  const SignInWithGitHub=(e:React.MouseEvent)=>{
+    e.preventDefault();
+    signInWithPopup(auth, new GithubAuthProvider).
+    then(result=>{
+      Router.replace('/')
+    }).
+    catch(error=>alert(error.message))
+  }
+
+  const SignInWithTwitter=(e:React.MouseEvent)=>{
+    e.preventDefault();
+  }
   return (
     <Div>
-      <Link className='dark:hidden ' href="/">
+      <Link className='dark:hidden' href="/" passHref>
         <Logo  width={123} height={36} src="/logo.svg" alt="img-logo"/>
       </Link>
-      <Link className='dark:block hidden' href="/">
+      <Link className='dark:block hidden' href="/" passHref>
         <Logo  width={123} height={36} src="/logo-white.svg" alt="img-logo"/>
       </Link>
       <LogInCard>
@@ -21,22 +49,25 @@ import { IconBrandTwitter } from '@tabler/icons';
          <LoginHeading>Login to your account</LoginHeading>
          <EmailHeading>Email address</EmailHeading>
          <form>
-          <Input type='email' placeholder='your@email.com' required/>
+          <Input  
+          type='email' placeholder='your@email.com'
+          required value={email} onChange={e=>setEmail(e.target.value)}
+          />
           <div className='flex justify-between mt-3'>
             <label className='text-gray-700 font-medium dark:text-white '>Password</label>
             <Link className='hover:underline underline:text-[#206bc4] text-[#206bc4] ' href='/forgotpassword'>I forgot Password</Link>
           </div>
           <div className=' relative flex justify-between'>
-           <InputPassword  type='password' placeholder='your password' required />
+           <InputPassword  type='password' placeholder='your password'
+            required value={password} onChange={e=>setPassWord(e.target.value)}
+           />
            <IconEye size={20} className='inline-block items-center absolute right-4 top-4 text-sm text-gray-700'></IconEye>
           </div>
           <div className='flex  gap-2'>
           <input className='mt-2 w-4 h-4 dark:bg-[#1a2234] py-1 focus:ring rounded-xl focus:ring-blue-100' type="checkbox" required />
           <p className='mt-1'>Remember me on this device</p>
           </div>
-          <Link href='/' className=''>
-          <Button type="submit" >Sign in</Button>
-          </Link>
+          <Button type="submit" onClick={SignIn}>Sign in</Button>
          </form>
         </LoginForm>
          <OtherSignIn>
@@ -44,14 +75,14 @@ import { IconBrandTwitter } from '@tabler/icons';
          </OtherSignIn>
          <LoginForm>
            <div className='flex gap-4 justify-center items-center'>
-            <Links href='#'>
+            <ButtonSign type='submit' onClick={SignInWithGitHub}>
             <IconBrandGithub size={20} className='inline-block dark:text-gray-900'></IconBrandGithub>
               Login with Github
-            </Links>
-            <Links href='#'>
+            </ButtonSign>
+            <ButtonSign type='submit' onClick={SignInWithTwitter}>
               <IconBrandTwitter size={20} className='inline-block text-blue-500'></IconBrandTwitter>
               Login with Twitter
-            </Links>
+            </ButtonSign>
            </div>
          </LoginForm>
       </LogInCard>
@@ -160,7 +191,7 @@ font-semibold
 items-center
 gap-1
 `
-const Links=tw.a`
+const ButtonSign=tw.button`
 items-center
 dark:text-white
 flex
