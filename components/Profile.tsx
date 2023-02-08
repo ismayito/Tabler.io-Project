@@ -13,7 +13,7 @@ import LoggedInUsers from "./LoggedInUsers";
 
 function Profile() {
    let user;
-   let email;
+   let email:any;
    let tokens;
    let token;
    let index;

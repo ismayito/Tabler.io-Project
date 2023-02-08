@@ -1,13 +1,13 @@
-export function setInStorage(key, data) {
+export function setInStorage(key:any, data:any) {
 	localStorage.setItem(key, JSON.stringify(data));
 }
 
-export function getFromStorage(key) {
+export function getFromStorage(key:any) {
 	return  JSON.parse(localStorage.getItem(key)!);
 }
 
 
-export function removeFromStorage(key){
+export function removeFromStorage(key:any){
 	return (localStorage.removeItem(key));
 }
 

@@ -12,13 +12,12 @@ const LoggedInUsers = () => {
   return (
     <div>
       {
-        loggedusers?.map((user, index)=>(
+        loggedusers?.map((user:any,index:any)=>(
           <button  onClick={()=>{Router.replace('/'+ `${index}`)}} key={user.id}>
             <List>
               <p className='text-center'>{user.email.split("@")[0]}</p>
                <p>{user.email}</p>
-            </List>
-               
+            </List>  
           </button>
          
         ))

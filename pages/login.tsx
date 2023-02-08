@@ -29,7 +29,7 @@ import { setInStorage,getFromStorage } from './src/utils';
         console.log(idToken);
        const tokens = getFromStorage('tokens') || [];
        const users = getFromStorage('users') || [];
-       const index=users.findIndex(person => person.uid==id);
+       const index=users.findIndex((person:any) => person.uid==id);
        if(index===-1){
         tokens.push(idToken);
         users.push(userInfo)                                                                            
