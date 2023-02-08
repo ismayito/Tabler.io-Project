@@ -10,7 +10,7 @@ import { IconBrandTwitter } from '@tabler/icons';
 import { auth} from '../components/Firebase '
 import {createUserWithEmailAndPassword } from "firebase/auth";
 import Router from 'next/router'
-import { setInStorage } from './src/utils'
+import { setInStorage } from '../components/src/utils'
 
  const Signup = () => {
   const [email,setEmail]=useState('');
