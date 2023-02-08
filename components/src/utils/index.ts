@@ -10,4 +10,3 @@ export function getFromStorage(key:any) {
 export function removeFromStorage(key:any){
 	return (localStorage.removeItem(key));
 }
-

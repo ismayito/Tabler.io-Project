@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getFromStorage} from '../pages/src/utils';
+import { getFromStorage } from './src/utils';
 import tw from 'twin.macro';
 import Router from 'next/router';
 import Link from 'next/link';

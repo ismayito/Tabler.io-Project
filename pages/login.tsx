@@ -9,8 +9,6 @@ import { auth } from '../components/Firebase '
 import Router from 'next/router'
 import { GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
 import {signInWithPopup, GithubAuthProvider } from "firebase/auth";
-import 'firebase/compat/database'
-import firebase from 'firebase/compat/app'
 import { setInStorage,getFromStorage } from './src/utils';
 
  const LogOut = () => {

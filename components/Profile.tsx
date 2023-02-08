@@ -5,10 +5,9 @@ import React,{useState,useEffect} from 'react'
 import { IconUserPlus } from "@tabler/icons";
 import tw from "twin.macro";
 import Router from "next/router";
-import { removeFromStorage } from "../pages/src/utils";
 import { auth } from "./Firebase ";
 import { signOut } from "firebase/auth";
-import { getFromStorage } from "../pages/src/utils";
+import { getFromStorage,removeFromStorage  } from "./src/utils";
 import LoggedInUsers from "./LoggedInUsers";
 
 function Profile() {
