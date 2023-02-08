@@ -9,7 +9,7 @@ import { auth } from '../components/Firebase '
 import Router from 'next/router'
 import { GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
 import {signInWithPopup, GithubAuthProvider } from "firebase/auth";
-import { setInStorage,getFromStorage } from './src/utils';
+import { getFromStorage, setInStorage } from '../components/src/utils';
 
  const LogOut = () => {
   const [email,setEmail]=useState('');
