@@ -1,7 +1,7 @@
  import firebase from "firebase/app"
  import { initializeApp,getApp } from "firebase/app";
  import { getFirestore } from 'firebase/firestore';
- import { getAuth,createUserWithEmailAndPassword } from "firebase/auth";
+ import { getAuth} from "firebase/auth";
  import { env } from 'process';
 
 

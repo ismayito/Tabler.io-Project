@@ -9,21 +9,46 @@ import { auth } from '../components/Firebase '
 import Router from 'next/router'
 import { GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
 import {signInWithPopup, GithubAuthProvider } from "firebase/auth";
+import 'firebase/compat/database'
+import firebase from 'firebase/compat/app'
+import { setInStorage,getFromStorage } from './src/utils';
 
  const LogOut = () => {
   const [email,setEmail]=useState('');
   const [password,setPassWord]= useState('');
-
+  var user =auth.currentUser;
   const SignIn=(e:React.MouseEvent)=>{
     e.preventDefault();
     signInWithEmailAndPassword(auth,email,password).
-    then(auth=>{
-      Router.replace("/")
-      
+    then((authInfo)=>{
+      const user = authInfo.user;
+      const id=user.uid;
+      const email=user.email;
+      const userInfo={email,id};
+      user.getIdToken().then((idToken)=>{
+        console.log(idToken);
+       const tokens = getFromStorage('tokens') || [];
+       const users = getFromStorage('users') || [];
+       const index=users.findIndex(person => person.uid==id);
+       if(index===-1){
+        tokens.push(idToken);
+        users.push(userInfo)                                                                            
+        setInStorage("accessToken",tokens);
+        setInStorage("users",users);
+        Router.replace(`/${tokens.length-1}`)
+       }
+       else{
+        Router.replace(`/${index}`);
+       }
+    });
     }).
-    catch(error=>alert(error.message)) 
+    catch((error)=>{
+      alert(error.message);
+    }
+      ) 
+    setEmail("");
+    setPassWord('');
   }
-
   const SignInWithGitHub=(e:React.MouseEvent)=>{
     e.preventDefault();
     signInWithPopup(auth, new GithubAuthProvider).

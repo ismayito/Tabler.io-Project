@@ -16,7 +16,7 @@ const ThemeSwitcher = () => {
       }
       if(theme==="light"){
         return (
-          <Link href="?theme=dark"
+          <Link href="/?theme=dark" passHref
           aria-label="Enable light mode"
           >
             <MdOutlineDarkMode
@@ -27,7 +27,7 @@ const ThemeSwitcher = () => {
       }
       else {
         return(
-          <Link href="?theme=light"
+          <Link href="/?theme=light" passHref
           aria-label="Enable light mode"
           >
             <BsSun

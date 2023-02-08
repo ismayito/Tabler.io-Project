@@ -21,6 +21,11 @@ import SocialMedia from '../components/SocialMedia'
 import Tasks from '../components/Tasks'
 import Invoices from '../components/Invoices'
 import Footer from '../components/Footer'
+import { getFromStorage } from './src/utils'
+
+import { parse } from 'path'
+import { useEffect, useState } from 'react';
+import Router from 'next/router'
 const Map = dynamic(() => import('../components/Charts/Map'), { ssr: false });
 export default function Home() {
   return (
@@ -31,7 +36,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header></Header>
-      <Dashboard></Dashboard>   
+      <Dashboard></Dashboard>
       <DashBoardBody>
         <Cards></Cards>
         <SocialsCard></SocialsCard>

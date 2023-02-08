@@ -10,6 +10,7 @@ import { IconBrandTwitter } from '@tabler/icons';
 import { auth} from '../components/Firebase '
 import {createUserWithEmailAndPassword } from "firebase/auth";
 import Router from 'next/router'
+import { setInStorage } from './src/utils'
 
  const Signup = () => {
   const [email,setEmail]=useState('');
@@ -19,9 +20,12 @@ import Router from 'next/router'
 const createAccount=(e:React.MouseEvent)=>{
     e.preventDefault();
     createUserWithEmailAndPassword( auth,email,password).
-    then(user=>{
+    then(users=>{
+      var user =auth.currentUser;
+      const email=user?.email
       if(auth){
-        Router.replace('/')
+        Router.replace('/login')
+        setInStorage('logggedusers', JSON.stringify(email));
       }
       console.log(user)
     }).
