@@ -7,7 +7,7 @@ import { IconBrandGithub } from '@tabler/icons';
 import { IconBrandTwitter } from '@tabler/icons';
 import { auth } from '../components/Firebase '
 import Router from 'next/router'
-import { GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
+import {signInWithEmailAndPassword } from "firebase/auth";
 import {signInWithPopup, GithubAuthProvider } from "firebase/auth";
 import { getFromStorage, setInStorage } from '../components/src/utils';
 
@@ -33,7 +33,7 @@ import { getFromStorage, setInStorage } from '../components/src/utils';
         users.push(userInfo)                                                                            
         setInStorage("accessToken",tokens);
         setInStorage("users",users);
-        Router.replace(`/${tokens.length-1}`)
+        Router.replace(`/${tokens.length}`)
        }
        else{
         Router.replace(`/${index}`);
