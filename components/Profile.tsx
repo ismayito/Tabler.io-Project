@@ -1,39 +1,39 @@
-import { Menu } from "@headlessui/react";
-import Link from "next/link";
-import Image from "next/image";
-import React,{useState,useEffect} from 'react'
-import { IconUserPlus } from "@tabler/icons";
-import tw from "twin.macro";
-import Router from "next/router";
+import { Menu } from '@headlessui/react';
+import Link from 'next/link';
+import Image from 'next/image';
+import React, { useState, useEffect } from 'react';
+import { IconUserPlus } from '@tabler/icons';
+import tw from 'twin.macro';
+import Router from 'next/router';
 
-import { auth } from "./Firebase ";
-import { signOut } from "firebase/auth";
-import { getFromStorage,removeFromStorage  } from "./src/utils";
-import LoggedInUsers from "./LoggedInUsers";
+import { auth } from './Firebase ';
+import { signOut } from 'firebase/auth';
+import { getFromStorage, removeFromStorage } from './src/utils';
+import LoggedInUsers from './LoggedInUsers';
 
 function Profile() {
-   let user;
-   let email:any;
-   let tokens;
-   let token;
-   let index;
-   const [loggeduser,setLoggedUser]= useState(email);
-   const [accessToken,setAccessToken]= useState("");
-   useEffect(()=>{
-    user=getFromStorage("users")|| [];
-    tokens=getFromStorage("accessToken")|| [];
-    token=tokens[0]
-    email=user[0]?.email;
+  let user;
+  let email: any;
+  let tokens;
+  let token;
+
+  const [loggeduser, setLoggedUser] = useState(email);
+  const [accessToken, setAccessToken] = useState('');
+  useEffect(() => {
+    user = getFromStorage('users') || [];
+    tokens = getFromStorage('accessToken') || [];
+    token = tokens[0];
+    email = user[0]?.email;
     setLoggedUser(email);
     setAccessToken(token);
-   },[])
-   const LogOut = () => {
+  }, []);
+  const LogOut = () => {
     signOut(auth)
       .then(() => {
-        removeFromStorage("users");
-        removeFromStorage("accessToken");
-        removeFromStorage("usersId");
-        Router.replace("/login");
+        removeFromStorage('users');
+        removeFromStorage('accessToken');
+        removeFromStorage('usersId');
+        Router.replace('/login');
       })
       .catch((error) => {
         alert(error.message);
@@ -41,15 +41,14 @@ function Profile() {
       });
   };
 
-  const AnotherAcount=()=>{
-    if(accessToken) {
-      Router.replace("/login");
-    }
-    else{
+  const AnotherAcount = () => {
+    if (accessToken) {
+      Router.replace('/login');
+    } else {
       Router.push('/');
-      alert(`user not yet logged in`)
+      alert(`user not yet logged in`);
     }
-  }
+  };
   return (
     <Menu>
       <Menu.Button className="flex z-100">
@@ -61,9 +60,11 @@ function Profile() {
           height={40}
         ></Image>
         <div>
-          {
-            loggeduser ? <Name>{loggeduser.split("@")[0]}</Name>:<Name>Pawel Kuna </Name>
-          }
+          {loggeduser ? (
+            <Name>{loggeduser.split('@')[0]}</Name>
+          ) : (
+            <Name>Pawel Kuna </Name>
+          )}
           <Design>UI Designer</Design>
         </div>
       </Menu.Button>
@@ -82,7 +83,7 @@ function Profile() {
           {({ active }) => (
             <Link
               className={`${
-                active && "bg-gray-50 dark:bg-[#1a2234]"
+                active && 'bg-gray-50 dark:bg-[#1a2234]'
               } text-base w-full rounded-m p-2`}
               href="/"
             >
@@ -94,7 +95,7 @@ function Profile() {
           {({ active }) => (
             <Link
               className={`${
-                active && "bg-gray-50 dark:bg-[#1a2234]"
+                active && 'bg-gray-50 dark:bg-[#1a2234]'
               } text-base w-full rounded-m p-2`}
               href="/"
             >
@@ -106,7 +107,7 @@ function Profile() {
           {({ active }) => (
             <Link
               className={`${
-                active && "bg-gray-50 dark:bg-[#1a2234]"
+                active && 'bg-gray-50 dark:bg-[#1a2234]'
               } border-b border-gray-200 dark:border-[#243049]
               text-base 
               w-full 
@@ -121,7 +122,7 @@ function Profile() {
           {({ active }) => (
             <Link
               className={`${
-                active && "bg-gray-50 dark:bg-[#1a2234]"
+                active && 'bg-gray-50 dark:bg-[#1a2234]'
               } text-base w-full rounded-m p-2`}
               href="/Settings"
             >
@@ -133,9 +134,8 @@ function Profile() {
           {({ active }) => (
             <button
               className={`${
-                active && "bg-gray-50 dark:bg-[#1a2234]"
+                active && 'bg-gray-50 dark:bg-[#1a2234]'
               } text-base w-full rounded-m p-2 text-start inline-block`}
-              
             >
               <LoggedInUsers></LoggedInUsers>
             </button>
@@ -143,11 +143,11 @@ function Profile() {
         </Menu.Item>
         <Menu.Item key={Date.now()}>
           {({ active }) => (
-            <button onClick={AnotherAcount}
+            <button
+              onClick={AnotherAcount}
               className={`${
-                active && "bg-gray-50 dark:bg-[#1a2234]"
+                active && 'bg-gray-50 dark:bg-[#1a2234]'
               } text-base w-full rounded-m p-2 text-start inline-block`}
-              
             >
               <span className="inline-block">
                 <IconUserPlus></IconUserPlus>
@@ -161,7 +161,7 @@ function Profile() {
             <button
               onClick={LogOut}
               className={`${
-                active && "bg-gray-50 dark:bg-[#1a2234]"
+                active && 'bg-gray-50 dark:bg-[#1a2234]'
               }  text-left text-base w-full rounded-m p-2`}
             >
               LogOut

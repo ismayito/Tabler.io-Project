@@ -4,28 +4,30 @@ import tw from 'twin.macro';
 import Router from 'next/router';
 import Link from 'next/link';
 const LoggedInUsers = () => {
-    let loggedusers;
-    if(typeof window!=="undefined") {
-        loggedusers= getFromStorage("users"||[]);
-    }
-   
+  let loggedusers;
+  if (typeof window !== 'undefined') {
+    loggedusers = getFromStorage('users' || []);
+  }
+
   return (
     <div>
-      {
-        loggedusers?.map((user:any,index:any)=>(
-          <button  onClick={()=>{Router.replace('/'+ `${index+1}`)}} key={user.id}>
-            <List>
-              <p className='text-center'>{user.email.split("@")[0]}</p>
-               <p>{user.email}</p>
-            </List>  
-          </button>
-         
-        ))
-      }
+      {loggedusers?.map((user: any, index: any) => (
+        <button
+          onClick={() => {
+            Router.replace('/' + `${index + 1}`);
+          }}
+          key={user.id}
+        >
+          <List>
+            <p className="text-center">{user.email.split('@')[0]}</p>
+            <p>{user.email}</p>
+          </List>
+        </button>
+      ))}
     </div>
-  )
-}
-const List=tw.li`
+  );
+};
+const List = tw.li`
 list-none
 pl-[8px]
 gap-3
@@ -34,6 +36,6 @@ border
 border-red-200
 rounded-md
 text-[16px]
-`
+`;
 
-export default LoggedInUsers
+export default LoggedInUsers;

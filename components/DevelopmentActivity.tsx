@@ -1,21 +1,21 @@
-import React from 'react'
-import tw from 'twin.macro'
-import DevelopmentChart from './Charts/DevelopmetChart'
-import EarningsChart from './Charts/EarningsChart'
-import Commits from './Commits'
+import React from 'react';
+import tw from 'twin.macro';
+import DevelopmentChart from './Charts/DevelopmetChart';
+import EarningsChart from './Charts/EarningsChart';
+import Commits from './Commits';
 
 export const DevelopmentActivity = () => {
   return (
     <Div>
-        <Head>Development activity</Head>
-        <EarningsChart></EarningsChart>
-        <DevelopmentChart></DevelopmentChart>
-        <Commits></Commits>
+      <Head>Development activity</Head>
+      <EarningsChart></EarningsChart>
+      <DevelopmentChart></DevelopmentChart>
+      <Commits></Commits>
     </Div>
-  )
-}
+  );
+};
 
-const Div=tw.div`
+const Div = tw.div`
 bg-white
 border
 border-gray-200
@@ -26,9 +26,9 @@ pt-4
 mt-4
 pb-0
 mb-0
-`
-const Head=tw.p`
+`;
+const Head = tw.p`
 px-6
 font-medium
 pb-4
-`
+`;

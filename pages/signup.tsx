@@ -1,100 +1,123 @@
-
-import React,{useState} from 'react'
-import tw from "twin.macro"
-import Image from 'next/image'
-import Link from "next/link"
-import {AiOutlineEye} from 'react-icons/ai'
+import React, { useState } from 'react';
+import tw from 'twin.macro';
+import Link from 'next/link';
 import { IconEye } from '@tabler/icons';
-import { IconBrandGithub } from '@tabler/icons';
-import { IconBrandTwitter } from '@tabler/icons';
-import { auth} from '../components/Firebase '
-import {createUserWithEmailAndPassword } from "firebase/auth";
-import Router from 'next/router'
-import { setInStorage } from '../components/src/utils'
+import { auth } from '../components/Firebase ';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import Router from 'next/router';
+import { setInStorage } from '../components/src/utils';
 
- const Signup = () => {
-  const [email,setEmail]=useState('');
-  const [password,setPassWord]= useState('');
-  const [name,setName]= useState('');
+const Signup = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassWord] = useState('');
+  const [name, setName] = useState('');
 
-const createAccount=(e:React.MouseEvent)=>{
+  const createAccount = (e: React.MouseEvent) => {
     e.preventDefault();
-    createUserWithEmailAndPassword( auth,email,password).
-    then(users=>{
-      var user =auth.currentUser;
-      const email=user?.email
-      if(auth){
-        Router.replace('/login')
-        setInStorage('logggedusers', JSON.stringify(email));
-      }
-      console.log(user)
-    }).
-    catch(error=>alert(error.message));
-  }
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((users) => {
+        const user = auth.currentUser;
+        const email = user?.email;
+        if (auth) {
+          Router.replace('/login');
+          setInStorage('logggedusers', JSON.stringify(email));
+        }
+      })
+      .catch((error) => alert(error.message));
+  };
   return (
     <Div>
-      <Link href='/' className='dark:hidden' passHref>
-        <Logo  width={123} height={36} src="/logo.svg" alt="img-logo"/>
+      <Link href="/" className="dark:hidden" passHref>
+        <Logo width={123} height={36} src="/logo.svg" alt="img-logo" />
       </Link>
-      <Link href='/' className='dark:block hidden' passHref>
-        <Logo  width={123} height={36} src="/logo-white.svg" alt="img-logo"/>
+      <Link href="/" className="dark:block hidden" passHref>
+        <Logo width={123} height={36} src="/logo-white.svg" alt="img-logo" />
       </Link>
       <LogInCard>
         <LoginForm>
-         <LoginHeading>Create new account</LoginHeading>
-         <form>
-         <Name >Name</Name>
-          <Input  
-          type='text' placeholder='Enter name'
-          required value={name} onChange={e=>setName(e.target.value)}
-          />
-          <div className='mt-2'>
-         <EmailHeading>Email address</EmailHeading>
-          <Input  
-          type='email' placeholder='Enter email'
-          required value={email} onChange={e=>setEmail(e.target.value)}
-          />
-          </div>
-          <div className='flex justify-between mt-3'>
-            <label className='text-gray-700 font-medium dark:text-white '>Password</label>
-          </div>
-          <div className=' relative flex justify-between'>
-           <InputPassword  type='password' placeholder='your password'
-            required value={password} onChange={e=>setPassWord(e.target.value)}
-           />
-           <IconEye size={20} className='inline-block items-center absolute right-4 top-4 text-sm text-gray-700'></IconEye>
-          </div>
-          <div className='flex  mt-2 gap-2'>
-          <input className='mt-2 w-4 h-4 dark:bg-[#1a2234] py-1 focus:ring rounded-xl focus:ring-blue-100' type="checkbox" required />
-          <p className='mt-1'>Agree the <span className='text-blue-500'>terms and policy.</span></p>
-          </div>
-          <Button type="submit" onClick ={createAccount} >Create new account</Button>
-         </form>
+          <LoginHeading>Create new account</LoginHeading>
+          <form>
+            <Name>Name</Name>
+            <Input
+              type="text"
+              placeholder="Enter name"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <div className="mt-2">
+              <EmailHeading>Email address</EmailHeading>
+              <Input
+                type="email"
+                placeholder="Enter email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="flex justify-between mt-3">
+              <label className="text-gray-700 font-medium dark:text-white ">
+                Password
+              </label>
+            </div>
+            <div className=" relative flex justify-between">
+              <InputPassword
+                type="password"
+                placeholder="your password"
+                required
+                value={password}
+                onChange={(e) => setPassWord(e.target.value)}
+              />
+              <IconEye
+                size={20}
+                className="inline-block items-center absolute right-4 top-4 text-sm text-gray-700"
+              ></IconEye>
+            </div>
+            <div className="flex  mt-2 gap-2">
+              <input
+                className="mt-2 w-4 h-4 dark:bg-[#1a2234] py-1 focus:ring rounded-xl focus:ring-blue-100"
+                type="checkbox"
+                required
+              />
+              <p className="mt-1">
+                Agree the{' '}
+                <span className="text-blue-500">terms and policy.</span>
+              </p>
+            </div>
+            <Button type="submit" onClick={createAccount}>
+              Create new account
+            </Button>
+          </form>
         </LoginForm>
       </LogInCard>
       <Footer>
-          <p className='text-gray-500'>Already have an account ?</p>
-          <Link href='/login' className='text-blue-500 hover:underline underline-blue-500'>Sign in</Link>
-         </Footer>
+        <p className="text-gray-500">Already have an account ?</p>
+        <Link
+          href="/login"
+          className="text-blue-500 hover:underline underline-blue-500"
+        >
+          Sign in
+        </Link>
+      </Footer>
     </Div>
-  )
-}
+  );
+};
 
 export default Signup;
-const Div=tw.div`
+const Div = tw.div`
 border-t-2
 border-blue-600
 dark:border-blue-700
 h-auto
 dark:bg-[#1a2234]
 min-h-full
-`
-const Logo= tw.img`
+`;
+const Logo = tw.img`
 mt-20
 mx-auto
 mb-4
-`
-const LogInCard=tw.div`
+`;
+const LogInCard = tw.div`
 w-[456px]
 mx-auto
 bg-white 
@@ -105,11 +128,11 @@ border
 border-gray-200
 dark:border-[#243049]
 h-auto 
-`
-const LoginForm=tw.div`
+`;
+const LoginForm = tw.div`
 p-10
-`
-const LoginHeading= tw.h2`
+`;
+const LoginHeading = tw.h2`
 text-xl
 dark:text-white
 mb-8
@@ -117,19 +140,19 @@ text-gray-800
 flex 
 justify-center
 items-center 
-`
-const EmailHeading=tw.label`
+`;
+const EmailHeading = tw.label`
 text-gray-700
  font-medium
 dark:text-white
 
-`
-const Name=tw.label`
+`;
+const Name = tw.label`
 text-gray-700
  font-medium
 dark:text-white
-`
-const Input=tw.input`
+`;
+const Input = tw.input`
 w-full 
 px-3
 rounded
@@ -143,8 +166,8 @@ focus:ring-blue-100
  py-[7px] 
  mt-1
 align-middle
-`
-const InputPassword=tw.input`
+`;
+const InputPassword = tw.input`
 w-full 
 px-3
 rounded
@@ -159,8 +182,8 @@ py-[7px]
 mt-1
 relative
 align-middle
-`
-const Button=tw.button`
+`;
+const Button = tw.button`
 mt-8
 w-full
 bg-[#206bc4]
@@ -174,36 +197,13 @@ border-none
 text-white
 font-medium
 px-4
-`
-const OtherSignIn=tw.div`
-flex
-text-[10px]
-font-semibold
-items-center
-gap-1
-`
-const Links=tw.a`
-items-center
-dark:text-white
-flex
-text-[14px] 
-gap-1
-text-gray-700
-font-medium
-py-[7px]
-px-4
-border
-border-gray-200
-dark:border-[#243049]
-rounded
-hover:transition-all
-transform
-`
-const Footer=tw.div`
+`;
+
+const Footer = tw.div`
 justify-center
 mx-auto
 mt-4
 gap-1
 flex
 mb-auto
-`
+`;

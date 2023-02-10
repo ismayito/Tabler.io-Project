@@ -1,28 +1,28 @@
-import React from 'react'
-import { IconGhost } from '@tabler/icons'
-import tw from 'twin.macro'
+import React from 'react';
+import { IconGhost } from '@tabler/icons';
+import tw from 'twin.macro';
 
 const TablerIcons = () => {
   return (
     <Div>
-     <DivBackground>
+      <DivBackground>
         <IconGhost size={160} className="rotate-12"></IconGhost>
-     </DivBackground>
+      </DivBackground>
       <Content>
         <Head>Tabler Icons</Head>
         <Paragraph>
-          All icons come from the Tabler Icons set and are MIT-licensed. 
-          Visit tabler-icons.io, download any of the 2979 icons in SVG, PNG or React 
+          All icons come from the Tabler Icons set and are MIT-licensed. Visit
+          tabler-icons.io, download any of the 2979 icons in SVG, PNG or React
           and use them in your favourite design tools.
         </Paragraph>
-        <Links href='https://tabler-icons.io/'>Download icons</Links>
+        <Links href="https://tabler-icons.io/">Download icons</Links>
       </Content>
     </Div>
-  )
-}
+  );
+};
 
-export default TablerIcons
-const Div=tw.div`
+export default TablerIcons;
+const Div = tw.div`
 bg-white
 border
 border-gray-200
@@ -34,24 +34,24 @@ rounded
 h-auto
 mt-4
 mx-1
-`
-const Content=tw.div`
+`;
+const Content = tw.div`
 flex
 p-10
 flex-col
-`
-const Head=tw.p`
+`;
+const Head = tw.p`
 text-[#1d273b]
 pb-2
 text-2xl
 font-medium
 dark:text-white
-`
-const Paragraph=tw.p`
+`;
+const Paragraph = tw.p`
 text-[#616876]
 max-w-[940px]
-`
-const Links=tw.a`
+`;
+const Links = tw.a`
 mt-4
 bg-[#206bc4]
 hover:bg-blue-500
@@ -65,8 +65,8 @@ text-white
 font-medium
 px-4
 w-[150px]
-`
-const DivBackground=tw.div`
+`;
+const DivBackground = tw.div`
 absolute
 bg-[#206bc4]
 overflow-hidden
@@ -81,4 +81,4 @@ text-white
 h-52
 opacity-20
 w-52
-`
+`;

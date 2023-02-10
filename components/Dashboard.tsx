@@ -1,28 +1,28 @@
-import React from 'react'
-import tw from 'twin.macro'
-import {AiOutlinePlus} from "react-icons/ai"
+import React from 'react';
+import tw from 'twin.macro';
+import { AiOutlinePlus } from 'react-icons/ai';
 
 const Dashboard = () => {
   return (
     <Div>
-        <Paragraph>OVERVIEW</Paragraph>
-        <Div1>
-          <Heading>Dashboard</Heading>
-          <DivSub>
-            <Button1>New view</Button1>
-            <Button2>
-                <AiOutlinePlus  size={20} className='inline-block'></AiOutlinePlus>
-                <ButonDiv>Create new report</ButonDiv>
-            </Button2>
-          </DivSub>  
-        </Div1>
+      <Paragraph>OVERVIEW</Paragraph>
+      <Div1>
+        <Heading>Dashboard</Heading>
+        <DivSub>
+          <Button1>New view</Button1>
+          <Button2>
+            <AiOutlinePlus size={20} className="inline-block"></AiOutlinePlus>
+            <ButonDiv>Create new report</ButonDiv>
+          </Button2>
+        </DivSub>
+      </Div1>
     </Div>
-  )
-}
+  );
+};
 
 export default Dashboard;
 
-const Div=tw.div`
+const Div = tw.div`
  md:grid
  lg:flex
  lg:flex-col
@@ -35,29 +35,29 @@ const Div=tw.div`
  w-full 
  mx-1
  sm:mx-0
-`
-const Paragraph=tw.p`
+`;
+const Paragraph = tw.p`
 text-[10px]
 font-semibold
 text-gray-400
 dark:text-gray-400
-`
-const Div1= tw.div`
+`;
+const Div1 = tw.div`
  flex
  justify-between
  mt-1
-`
-const Heading= tw.h1`
+`;
+const Heading = tw.h1`
 text-black
 font-semibold
 dark:text-white
 text-xl
-`
-const DivSub=tw.div`
+`;
+const DivSub = tw.div`
 flex
 gap-2
-`
-const Button1=tw.button`
+`;
+const Button1 = tw.button`
 px-4
 py-1
 bg-gray-50
@@ -74,9 +74,9 @@ dark:text-white
 dark:bg-[#1a2234]
 dark:border-[#243049]
 dark:hover:bg-[#1d273b]
-`
+`;
 
-const Button2=tw.button`
+const Button2 = tw.button`
 flex
 gap-3
 text-white
@@ -91,10 +91,10 @@ mr-1
 bg-[#206bc4]
 rounded
 hover:bg-[#206bc4]
-`
-const ButonDiv=tw.div`
+`;
+const ButonDiv = tw.div`
 hidden
 sm:max-sm:hidden 
 sm:max-md:block
 md:block
-`
+`;

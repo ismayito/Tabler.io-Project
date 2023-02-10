@@ -3,18 +3,18 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  env:{
-    apiKey: process.env.KEY
+  env: {
+    apiKey: process.env.KEY,
   },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/i,
       issuer: /\.[jt]sx?$/,
       use: ['@svgr/webpack'],
-    })
-   
-    return config
-  },
-}
+    });
 
-module.exports = nextConfig
+    return config;
+  },
+};
+
+module.exports = nextConfig;
