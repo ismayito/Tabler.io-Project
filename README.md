@@ -1,34 +1,120 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📗 Table of Contents
 
-## Getting Started
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [📝 License](#license)
 
-First, run the development server:
+# 📖 [Tabler.io] <a name="about-project"></a>
 
-```bash
-npm run dev
-# or
-yarn dev
+**[Tabler.io project]** This Is a Next JS: website project that is used to analyze and display meaningful insights about the order and sales of a given product. It has both the light mode and dark mode theme to give the user a better experience when using this website. It is highly responsive on all screen devices and integrates seamlessly on all devices.
+
+
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li>Tailwind CSS</li>
+    <li>HTML</li>
+    <li>Javascript</li>
+    <li>Next Js</li>
+    <li>Firebase</li>
+    <li>Styled Components</li>
+  </ul>
+</details>
+
+### Key Features <a name="key-features"></a>
+- **[Tabler.io UI ]**
+- **[Dark mode theme]**
+- **[Light mode theme]**
+- **[Login UI and functionality]**
+- **[Log out UI and functionality ]**
+
+
+### [🚀 Live Demo](#live-demo)
+---------------------------------------------------------------------------------------------------------------------
+[🚀 Live Demo](https://tabler-io-project.vercel.app/)
+---------------------------------------------------------------------------------------------------------------------
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+In order to run this project you need the following:
+
+- A web browser to view output e.g [Google Chrome](https://www.google.com/chrome/).
+- An IDE e.g [Visual studio code](https://code.visualstudio.com/).
+- `node` should be installed in your local machine, [node website](https://nodejs.org/en/download/).
+- Install the `npm` package manager use this [to install both node and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+- [A terminal](https://code.visualstudio.com/docs/terminal/basics).
+
+### Setup
+
+Clone this repository to your desired folder or download the Zip folder:
+
+```
+git clone https://github.com/ismayito/Tabler.io-Project.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Navigate to the location of the folder in your machine:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+**``you@your-Pc-name:~$ cd Tabler.io-Project``**
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 👥 Authors <a name="author"></a>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+**Mayito Ismail**
 
-## Learn More
+- GitHub: [@ismayito](https://github.com/ismayito)
+- Twitter: [@IsmailMayito](https://twitter.com/IsmailMayito)
+- LinkedIn: [mayito-ismail](https://www.linkedin.com/in/mayito-ismail-2b0067178/)
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🔭 Future Features <a name="future-features"></a>
 
-## Deploy on Vercel
+- [ ] **[More CSS styling]**
+- [ ] **[Add more pages]**
+- [ ] **[Add more functionality]**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project checkout my other repositories on my github profile
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./MIT.md) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
